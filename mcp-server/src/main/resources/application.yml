@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: mcp-server
+  ai:
+    mcp:
+      server:
+        name: webflux-mcp-server
+        version: 1.0.0
+        type: ASYNC  # Recommended for reactive applications
+        instructions: "Test Mcp Server"
+        capabilities:
+          tool: true
+          resource: true
+          prompt: true
+          completion: true
+#        sse-message-endpoint: /mcp/messages
+#        sse-message-endpoint: /sse
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+#          model: gpt-4.1-nano-2025-04-14
+          model: gpt-4o-2024-08-06
+#          model: gpt-4.1-mini-2025-04-14
+#          model: gpt-4o-mini-2024-07-18
+
+logging:
+  level:
+    org.springframework.web: debug
+    org.bmserver.mcpstudy: DEBUG

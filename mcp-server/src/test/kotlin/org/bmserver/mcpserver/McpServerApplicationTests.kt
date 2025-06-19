@@ -1,13 +1,13 @@
-package org.bmserver.mcpstudy
+package org.bmserver.mcpserver
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class McpStudyApplicationTests {
+class McpServerApplicationTests {
 
-	@Test
-	fun contextLoads() {
-	}
+    @Test
+    fun contextLoads() {
+    }
 
 }

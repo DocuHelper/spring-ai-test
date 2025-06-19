@@ -1,11 +1,11 @@
-package org.bmserver.mcpstudy
+package org.bmserver.mcpclient
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class McpStudyApplication
+class McpClientApplication
 
 fun main(args: Array<String>) {
-	runApplication<McpStudyApplication>(*args)
+    runApplication<McpClientApplication>(*args)
 }
