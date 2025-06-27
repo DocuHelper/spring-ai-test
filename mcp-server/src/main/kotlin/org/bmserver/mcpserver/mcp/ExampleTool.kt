@@ -20,6 +20,18 @@ class ExampleTool {
     }
 
 
+    @Tool(description = "문서를 추가합니다.")
+    fun addDocument(title:String, content: String): Document {
+        println("================= 문서를 추가합니다. ========================")
+        val newDocument = Document(
+            uuid = UUID.randomUUID(),
+            title = title,
+            content =  content
+        )
+        return Document.otherDocument.add(newDocument).let { newDocument }
+    }
+
+
     @Tool(description = "모든 문서의 uuid를 가져옵니다.")
     fun getAllDocumentId(): List<UUID> {
         println("================= 모든 문서의 uuid를 가져옵니다. ========================")

@@ -13,7 +13,7 @@ spring:
           resource: true
           prompt: true
           completion: true
-#        sse-message-endpoint: /mcp/messages
+    #        sse-message-endpoint: /mcp/messages
 #        sse-message-endpoint: /sse
     openai:
       api-key: ${OPENAI_API_KEY}
@@ -28,3 +28,4 @@ logging:
   level:
     org.springframework.web: debug
     org.bmserver.mcpstudy: DEBUG
+    org.springframework.web.HttpLogging: TRACE

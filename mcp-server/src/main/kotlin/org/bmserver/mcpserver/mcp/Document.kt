@@ -8,7 +8,9 @@ class Document(
     val content: String,
 ) {
     companion object {
-        fun allDocument() = listOf(documents_A(), documents_B(), documents_C()).flatten()
+        val otherDocument: MutableList<Document> = mutableListOf()
+
+        fun allDocument() = listOf(documents_A(), documents_B(), documents_C(), otherDocument).flatten()
 
         fun documents_A() = listOf(
             Document(UUID.fromString("8b040dae-538d-4beb-88c3-ad60dcc448aa"), "문서 A_1", "내가 본 사람은 별로 친해지고싶지 않았다."),
@@ -27,6 +29,7 @@ class Document(
             Document(UUID.fromString("8fd3d51a-69cf-487e-8d0c-6e8943ed4126"), "문서 C_2", "우리가 본 너는 우리가 본 너는 날카로워 보였다."),
             Document(UUID.fromString("9267fab5-5268-4440-88e0-dc74fcae8a5e"), "문서 C_3", "우리가 본 너는 우리가 본 너는 기억에 남지 않았다.")
         )
+
     }
 
 }
